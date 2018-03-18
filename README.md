@@ -40,3 +40,6 @@ git add .
 git commit -a -m "My classical message to be replaced"
 git push
 ```
+# Create Swagger Documentation from source code
+
+    swagger generate spec -o ./swagger.json

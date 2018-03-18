@@ -42,8 +42,8 @@ func main() {
 	router := httprouter.New()
 	ac := controllers.NewAuthController(srv)
 	router.POST("/register", ac.Register)
-	router.POST("/login/:name", ac.Login)
-	router.POST("/logout", ac.Logout)
+	router.PUT("/login/:name", ac.Login)
+	router.DELETE("/logout/:userid", ac.Logout)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 
